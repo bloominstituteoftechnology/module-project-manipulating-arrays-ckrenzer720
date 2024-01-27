@@ -98,22 +98,13 @@
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
     function fightMonsters(lifePoints) {
-      let life = 0
-      let roundNum = lifePoints.pop()
-      while (roundNum < lifePoints.length) {
-        console.log(lifePoints[roundNum])
-        if (lifePoints < 0) {
-        }
-        
-        console.log(`you died in round ${roundNum}`)
-        roundNum++
+      let round = 0
+      while (lifePoints > 0) {
+        round++
+        lifePoints -= round
+      } return `You died in round ${round}`
       }
-      // if (lifePoints < 0) {
-      //   for (let idx = 0; idx < roundNum.length; idx++) {
-      // } 
-      // } return `You died in ${roundNum}`
-       
-      } 
+    //bracket sintax to acces
   //alive to fight as long as LP is bigger than zero
   //use a while loop
   //several rounds of monster fighting --> for loop
@@ -131,14 +122,19 @@
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
     function findEvenNums(arr) {
-      const newArray = arr.slice()
-    if (newArray % 2 === 0) {
-      let evenNum = arr.pop()
-        for (i = 0; i < arr[i]; i+2) {
-          console.log(evenNum)
-      }
-    }  return newArray
-  //push method to populate arrays
+      const newArray = []
+      //start loop
+      for (let i = 0; i < arr.length; i++) {
+        const num = arr[i]
+        if (arr[i] % 2 === 0) {
+          newArray.push(arr[i])
+        }
+      } return newArray
+      //check if num is divisble by 2
+
+      //if divis by 2, add to new array
+      
+      //return new array 
     
     }
 
