@@ -31,19 +31,18 @@
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the array.
     // 🧠 As you have done in the past, declare a variable before you start looping, to accumulate the result.
     function sumNumsFor(nums) { 
+
       //declare a variable before start looping
 
       // use a for loop over the array
-
-      // array of numbers add and return the total
-
+      
       // if function recieves empty array, returned value must be 0
 
       // if element of array is not a number, it is ignored
 
       // if the number 13 is encountered, the function returns the string "I'm too superstitious!"
     }
-
+    
     // 👉 CHALLENGE 2
     // 🧠 The function stripVowels takes a string, strips all lowcase vowel letters (a,e,i,o,u) from it and returns it.
     // 🧠 Example of usage:
@@ -51,12 +50,15 @@
     // ❗ Notes:
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
     function stripVowels(str) {
-
       //strip all lowcase vowel letters from a string (a, e, i, o, u) and return
 
-      //use a for loop to solve
+      let lowCase = str.replace(/[a,e,i,o,u]/g, "");
 
-    }
+      for (let index in str) {
+        return lowCase
+      }
+      }
+      //use a for loop to solve
 
     // 👉 CHALLENGE 3
     // 🧠 Reimplement sumNumsFor using a while loop instead of a for loop.
@@ -96,22 +98,30 @@
     // 🧠 Work out using pen and paper how the round number and the lifePoints change after each round.
     // 🧠 As long as there are lifePoints, decrease lifePoints by round number, and increase round number by one.
     function fightMonsters(lifePoints) {
-
-  //return a string
-
-  //use a while loop
-
-  //several rounds of monster fighting --> for loop
-
+      let life = 0
+      let roundNum = lifePoints.pop()
+      while (roundNum < lifePoints.length) {
+        console.log(lifePoints[roundNum])
+        if (lifePoints < 0) {
+        }
+        
+        console.log(`you died in round ${roundNum}`)
+        roundNum++
+      }
+      // if (lifePoints < 0) {
+      //   for (let idx = 0; idx < roundNum.length; idx++) {
+      // } 
+      // } return `You died in ${roundNum}`
+       
+      } 
   //alive to fight as long as LP is bigger than zero
-
+  //use a while loop
+  //several rounds of monster fighting --> for loop
   //Round 1 --> 1 hp is subracted from initial LP
   //Round 2 --> 2 hp is subracted from remaining LP
   //Round 3, 3 //Round 4, 4 etc
-
   //string is returned "You died in round 5".
-
-    }
+    
 
     // 👉 CHALLENGE 5
     // 🧠 The function findEvenNums takes an array of integers as its argument.
@@ -121,11 +131,15 @@
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
     function findEvenNums(arr) {
-
-  //returns new array containing even numbers from original array, same order
-
+      const newArray = arr.slice()
+    if (newArray % 2 === 0) {
+      let evenNum = arr.pop()
+        for (i = 0; i < arr[i]; i+2) {
+          console.log(evenNum)
+      }
+    }  return newArray
   //push method to populate arrays
-
+    
     }
 
     // 👉 CHALLENGE 6
@@ -167,11 +181,11 @@
     // nestedLoops(['hello', 'goodbye']) // should return ['hEllO', 'gOOdbyE']
     // ❗ Notes:
     // 🧠 To capitalize a string you can use its toUpperCase method: "a".toUpperCase() returns "A"
-    function nestedLoops() {
+    function nestedLoops(string) {
 
   // returns new array of strings which are the same except the vowel are capatalized
 
-  "a".toUpperCase() returns "A"
+  //"a".toUpperCase() returns "A"
     }
 
     // 👉 CHALLENGE 9
