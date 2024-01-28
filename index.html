@@ -31,16 +31,26 @@
     // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the array.
     // 🧠 As you have done in the past, declare a variable before you start looping, to accumulate the result.
     function sumNumsFor(nums) { 
-
       //declare a variable before start looping
+        let sum = 0
+        // if function recieves empty array, returned value must be 0
+        if (nums.length === 0) {
+          return sum
+        } 
+        // use a for loop over the array
+        for (let i = 0; i < nums.length; i++) {
+          // if the number 13 is encountered, the function returns the string "I'm too superstitious!"
+          if (nums[i] === 13) {
+            return "I'm too superstitious!"
+          }
+          if (typeof nums[i] == 'number') {
+            sum += nums[i]
+          } 
+          // if element of array is not a number, it is ignored
+        }
+        return sum
 
-      // use a for loop over the array
-      
-      // if function recieves empty array, returned value must be 0
 
-      // if element of array is not a number, it is ignored
-
-      // if the number 13 is encountered, the function returns the string "I'm too superstitious!"
     }
     
     // 👉 CHALLENGE 2
@@ -66,17 +76,26 @@
     // sumNumsWhile([1, 2, 3]) // should return 6
     // sumNumsWhile([1, 2, 13]) // should return "I'm too superstitious!"
     function sumNumsWhile(nums) {
-  //use a while loop
-
-  //declare a variable before start looping
-
+    //declare a variable before start looping
+      let sums = 0
+      let i = [0]
+      if (nums.length === 0) {
+      return 0
+    }
+    //use a while loop
+      while (nums > 0) {
+        sums += nums[i]
+      }
   // array of numbers add and return the total
-
-  // if function recieves empty array, returned value must be 0
-
-  // if element of array is not a number, it is ignored
-
   // if the number 13 is encountered, the function returns the string "I'm too superstitious!"
+    if (nums[i] === 13) {
+    return "I'm too superstitious!"
+    }
+  // if function recieves empty array, returned value must be 0
+    if (typeof nums[i] == 'number') {
+            sums += nums[i]
+      } 
+  // if element of array is not a number, it is ignored
 
     }
 
@@ -146,14 +165,20 @@
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
     function separateAges(ages) {
-
   //returns new array containing two elements, which are arrays
-
-  //first subarray --> ages under 21
-  //second subarray --> ages equal or over 21
-
+    const subArray1 = []
+    const subArray2 = []
+      for (let i = 0; i < ages.length; i++) {
+          if (ages[i] < 21) {
+            subArray1.push(ages[i])
+          } else {
+            subArray2.push(ages[i])
+          }
+      } 
+      return [subArray1,subArray2]
+    
     }
-
+    
     // 👉 CHALLENGE 7
     // 🧠 The function headAndTail takes an array as its argument.
     // 🧠 It returns an object with two properties: "head" and "tail".
